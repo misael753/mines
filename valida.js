@@ -27,7 +27,7 @@ botao.addEventListener('click', function logar(){
 
         if (pegaUsuario == usuarios[i].login && pegaSenha == usuarios[i].pass){
             validalogin = true
-            location.href = "index.html"
+            location.href = "mineshack.html"
             break  
         }
 
