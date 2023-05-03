@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oportunidade 5x5</title>
+    <title>Mines Hack</title>
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -32,7 +32,7 @@
                 <div><img src="images/empty.png" alt="💣"></div>
                 <div><img src="images/empty.png" alt="💣"></div>
                 <div><img src="images/empty.png" alt="💣"></div>
-                <div><img src="images/empty.png" alt="💣"></div>
+                <div><img src="images/empty.png" alt="💣"></div> 
                 <div><img src="images/empty.png" alt="💣"></div>
                 <div><img src="images/empty.png" alt="💣"></div>
                 <div><img src="images/empty.png" alt="💣"></div>
@@ -62,34 +62,19 @@
             <a href="https://tracking.braxbet.com/o/hfQbZm?lpage=HPK4a6" target="_blank"><button id="cadastro"
                     class="cadastro">Jogue aqui</button></a>
         </div>
-        <!--<a href="https://tracking.braxbet.com/o/hfQbZm?lpage=HPK4a6"><button id="cadastro" class="cadastro">Cadastre-se aqui</button></a>-->
-        <!--target="_blank"-->
         <p id="cadastro-texto"><b>☝️Clique no botão vermelho </b> para efetuar o cadastro na <b>ÚNICA</b> plataforma que
             o robô analisa.</p>
-
-        <div id="iframe-disabled">
-            <!--<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>-->
-        </div>
 
         <div style="margin: 20px 0;"></div>
 
     </div>
     <script>
-
-        var hasActive = true
-
-        const now = new Date();
-        const minutes = now.getMinutes();
-
-        if (minutes % 2 !== 0) {
-            hasActive = false
-        }
-
         const boardElement = document.getElementById("board");
         const y = "s"
         const overlayElement = document.getElementById("overlay");
         const statusElement = document.getElementById("status");
         const generateOpportunityButton = document.getElementById("generate-opportunity");
+        
         function generateMinesBoard(diamond_positions) {
             const grid = Array.from({
                 length: 25
@@ -110,7 +95,7 @@
             renderBoard(board);
             statusElement.textContent = "Injetando script";
             setTimeout(() => {
-                statusElement.textContent = "Verificando mapa de calor";
+                statusElement.textContent = "Verificando historico";
             }
                 , 2000);
             setTimeout(() => {
@@ -130,12 +115,6 @@
             }, () => Math.floor(Math.random() * 25));
         }
         generateOpportunityButton.addEventListener("click", handleClickGenerateOpportunity);
-
-        document.addEventListener("DOMContentLoaded", () => {
-            handleClickGenerateOpportunity();
-        }
-
-        );
 
        
 
