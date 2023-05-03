@@ -1,4 +1,4 @@
-[
+const users = [
     {
         "nome": "igor",
         "senha": "123"
@@ -8,4 +8,5 @@
         "senha": "mabub222"
     }
  
-]
+] 
+module.exports = users

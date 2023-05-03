@@ -1,7 +1,8 @@
 const cors = require('cors')
 const Express = require('express')
-const fs = require('fs')
+//const fs = require('fs')
 const app = Express()
+const users = require('./usuarios')
 
 app.use(cors());
 app.use(Express.json())
@@ -12,17 +13,18 @@ app.get('/', (req , res) => {
 })
 
 app.post('/login',(req, res) => {
-    const usuarioscad =   fs.readFileSync('./usuarios.json')
-    const usuariosparse = JSON.parse(usuarioscad)
+    
+    //const usuarioscad =   fs.readFileSync('./usuarios.json')
+    //const usuariosparse = JSON.parse(usuarioscad)
     
     console.log(req.body)
 
     var nome = req.body.nomes
     var senha = req.body.senha
     
-    console.log(usuariosparse)
+ 
 
-        for( var umUsuario of usuariosparse) {
+        for( var umUsuario of users) {
             if(nome == umUsuario.nome && senha == umUsuario.senha ){
                     //req.session.nome = umUsuario
                     res.send('conectado')

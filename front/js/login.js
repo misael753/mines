@@ -7,7 +7,7 @@ console.log(JSON.stringify({
     senha
 }));
 
-    fetch("https://mines-hack-backend.vercel.app/login",{
+    fetch("http://localhost:3000/login",{
         method:'POST',
         body: JSON.stringify({
             nomes,
