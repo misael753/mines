@@ -35,7 +35,9 @@ app.use('/acesso-restrito/*', (req, res, next) => {
 
       // artigos estaticos
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.get('/' , (req , res) => {
+    res.render('/index.html')
+})
 //start do server
 server.listen(app.get('port'), () => {
     console.log('server na porta', app.get('port'))
