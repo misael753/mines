@@ -18,7 +18,6 @@ console.log(JSON.stringify({
     })
 
     .then(async (resp) => {
-        console.log(resp)
         var status = await resp.text();
         console.log(status)
         if(status == 'conectado' ){
