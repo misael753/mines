@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "criando um formulario de login com back end e front end e um banco de dados usando json",
   "main": "backend.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
