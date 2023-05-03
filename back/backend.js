@@ -1,66 +1,28 @@
+const Express = require('express')
+const fs = require('fs')
+const app = Express()
+
+app.use(Express.json())
 
 
-const http = require('http')
-const path = require('path')
-
-const express =  require('express')
-const fs = require("fs");
-var session = require('express-session')
-
-
-const app = express()
-const server = http.createServer(app)
-
-
-
-app.use(express.json()) ;
-app.use(express.urlencoded());
-app.use(session({secret:"abc"}));
-
-   // configuraçoes
-   app.set('port', process.env.PORT || 3000)
-
-
-
-
-// secção de login
-app.use('/acesso-restrito/*', (req, res, next) => {
-    if( req.session.nome ){
-        next();
-    }else{
-        res.redirect('/index.html')
-    }
-      });
-
-
-      // artigos estaticos
-app.use(express.static(path.join(__dirname, 'public')))
-app.get('/' , (req , res) => {
-    res.render('/index.html')
+app.get('/', (req , res) => {
+    res.status(200).json({messagem: 'estou rodando'})
 })
-//start do server
-server.listen(app.get('port'), () => {
-    console.log('server na porta', app.get('port'))
-   
-   
-})
-
-
-// rota de login 2
-
 
 app.post('/login',(req, res) => {
     const usuarioscad =   fs.readFileSync('./usuarios.json')
     const usuariosparse = JSON.parse(usuarioscad)
     
+    console.log(req.body)
 
     var nome = req.body.nomes
     var senha = req.body.senha
     
+    console.log(usuariosparse)
 
         for( var umUsuario of usuariosparse) {
             if(nome == umUsuario.nome && senha == umUsuario.senha ){
-                    req.session.nome = umUsuario
+                    //req.session.nome = umUsuario
                     res.send('conectado')
                     return
             }
@@ -70,3 +32,10 @@ app.post('/login',(req, res) => {
         res.send('falhou')
     
 })
+
+const port = process.env.PORT || 3000
+app.listen(port , () => {
+    console.log('servidorrodandonaporta ', port )
+})
+
+
