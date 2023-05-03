@@ -13,7 +13,7 @@ const server = http.createServer(app)
 
 
 
-app.use(express.json());
+app.use(express.json()) ;
 app.use(express.urlencoded());
 app.use(session({secret:"abc"}));
 
