@@ -2,12 +2,12 @@
   "name": "como-criar-um-login-",
   "version": "1.0.0",
   "description": "criando um formulario de login com back end e front end e um banco de dados usando json",
-  "main": "backend.js",
+  "main": "index.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "node backend.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
