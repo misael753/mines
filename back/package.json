@@ -4,16 +4,17 @@
   "description": "criando um formulario de login com back end e front end e um banco de dados usando json",
   "main": "backend.js",
   "engines": {
-    "node": "18.x"
+    "node": "14.x"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node backend.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "express-session": "^1.17.2"
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.22"
   }
 }
