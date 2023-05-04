@@ -31,5 +31,9 @@ const users = [
         "nome": "guilherme",
         "senha": "guilherme01",
     },
+    {
+        "nome": "kennedy",
+        "senha": "kennedy12",
+    },
 ] 
 module.exports = users
