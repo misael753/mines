@@ -55,6 +55,9 @@ const users = [
         "nome": "leandrobahia",
         "senha": "13101989",
     },
-    
+    {
+        "nome": "dvinicius08",
+        "senha": "08012002",
+    },
 ] 
 module.exports = users
