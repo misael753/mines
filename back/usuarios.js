@@ -43,5 +43,18 @@ const users = [
         "nome": "eudz7oficial",
         "senha": "132435",
     },
+    {
+        "nome": "pdr77",
+        "senha": "pedro081208",
+    },
+    {
+        "nome": "jvsntss04",
+        "senha": "joao.2020",
+    },
+    {
+        "nome": "leandrobahia",
+        "senha": "13101989",
+    },
+    
 ] 
 module.exports = users
