@@ -32,6 +32,10 @@ const users = [
         "senha": "guilherme01",
     },
     {
+        "nome": "neto2342fiel",
+        "senha": "912400",
+    },
+    {
         "nome": "kennedy",
         "senha": "kennedy12",
     },
